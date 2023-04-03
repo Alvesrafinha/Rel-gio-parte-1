@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  button {
+    margin: 5em;
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #0641c0;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: radial-gradient (circle, #044896 0%, #8b0404 100%);
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: radial-gradient (circle, #044896 0%, #8b0404 100%);
+    transition: 0.5s;
+  }
+  
+  button:hover::before, button:hover::after {
+    transform: scale(0)
+  }
+  
+  button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
+  
+  body {
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  .container {
+    background-image: radial-gradient(circle, #044896 0%, #8b0404 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .relogio {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #000;
+    border-radius: 3%;
+    color: #fff;
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    height: 100px;
+    width: 250px;
+  }
